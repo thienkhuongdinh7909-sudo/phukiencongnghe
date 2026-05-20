@@ -1,0 +1,139 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /* Thay đổi: Nền hồng kem siêu nhạt, tạo cảm giác mềm mại hơn */
+  background-color: #fff5f6; 
+}
+
+.item2 {
+  flex-grow: 1;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  width: 100%;
+}
+
+.mainContent {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .mainContent {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .mainContent {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.product {
+  background-color: white;
+  border-radius: 0.75rem;
+  /* Thay đổi: Viền hồng nhạt tinh tế hơn viền xám cũ */
+  border: 1px solid #ffe4e6; 
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.product:hover {
+  /* Thay đổi: Đổ bóng có một chút ánh hồng nhẹ khi di chuột vào */
+  box-shadow: 0 10px 15px -3px rgba(244, 63, 94, 0.1);
+  transform: translateY(-2px);
+}
+
+.mainProduct {
+  padding: 1rem;
+  flex-grow: 1;
+}
+
+.productImage {
+  aspect-ratio: 1 / 1;
+  /* Thay đổi: Nền của khung ảnh thành hồng pastel nhạt */
+  background-color: #fff1f2; 
+  margin-bottom: 1rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.productImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.productName h5 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #111827;
+  margin-bottom: 0.5rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.25rem;
+}
+
+.productPrice {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.price {
+  font-size: 1.125rem;
+  font-weight: 700;
+  /* Thay đổi: Màu giá tiền chuyển thành hồng đậm nổi bật (Rose 600) */
+  color: #e11d48; 
+}
+
+.discount {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.oldPrice {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  text-decoration: line-through;
+}
+
+.percent {
+  font-size: 0.75rem;
+  /* Thay đổi: Màu phần trăm giảm giá chuyển thành hồng trung tính (Rose 500) */
+  color: #f43f5e; 
+  font-weight: 600;
+}
+
+.productRemain {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.buyButton {
+  /* Thay đổi: Nền nút bấm chuyển thành hồng ngọt ngào (Rose 500) */
+  background-color: #f43f5e; 
+  color: white;
+  padding: 0.625rem;
+  text-align: center;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin: 0 1rem 1rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.buyButton:hover {
+  /* Thay đổi: Khi hover nút sẽ đậm hơn một chút (Rose 600) */
+  background-color: #e11d48; 
+}
